@@ -142,6 +142,11 @@ const SignInView = () => {
                                         <div className='grid grid-cols-2 gap-2'>
                                             <Button 
                                              disabled={pending}
+                                             onClick={()=>{
+                                                authClient.signIn.social({
+                                                    provider:"google"
+                                                })
+                                             }}
                                                 variant="outline"
                                                 type='button'
                                                 className='h-9 border-2 border-slate-200 hover:border-slate-300 rounded-lg font-semibold text-slate-700 hover:bg-slate-50 transition-all duration-200 hover:scale-[1.02] text-xs'
@@ -156,6 +161,11 @@ const SignInView = () => {
                                             </Button>
                                             <Button 
                                              disabled={pending}
+                                             onClick={()=>{
+                                                authClient.signIn.social({
+                                                    provider:"github"
+                                                })
+                                             }}
                                                 variant="outline"
                                                 type='button'
                                                 className='h-9 border-2 border-slate-200 hover:border-slate-300 rounded-lg font-semibold text-slate-700 hover:bg-slate-50 transition-all duration-200 hover:scale-[1.02] text-xs'
